@@ -18,7 +18,9 @@ RULEDIRS= Gendarme.Rules.BadPractice \
 	 Gendarme.Rules.Security.Cas \
 	 Gendarme.Rules.Serialization \
 	 Gendarme.Rules.Smells \
-	 Gendarme.Rules.Ui
+	 Gendarme.Rules.Ui \
+	 Unity.Rules.Maintainability \
+	 Unity.Rules.Performance
 TESTDIRS = Test.Rules
 
 SUBDIRS = $(TESTDIRS) $(RULEDIRS)

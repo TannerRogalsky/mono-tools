@@ -269,6 +269,8 @@ gendarme/rules/Gendarme.Rules.Globalization/Makefile
 gendarme/rules/Gendarme.Rules.Globalization/Test/Makefile
 gendarme/rules/Gendarme.Rules.Gendarme/Makefile
 gendarme/rules/Gendarme.Rules.Gendarme/Test/Makefile
+gendarme/rules/Unity.Rules.Maintainability/Makefile
+gendarme/rules/Unity.Rules.Performance/Makefile
 gendarme/swf-wizard-runner/Makefile
 gendarme/tools/Makefile
 gendarme/tools/supported/Makefile
