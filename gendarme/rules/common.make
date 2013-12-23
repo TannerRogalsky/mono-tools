@@ -9,8 +9,8 @@ console_runner=../../bin/gendarme.exe
 framework=../../bin/Gendarme.Framework.dll
 common_tests=../Test.Rules/Test.Rules.dll
 
-prefixed_rules_category = $(shell expr "$(PWD)" : '.*\(Gendarme.Rules.*\)')
-rules_category = $(shell echo $(prefixed_rules_category) | cut -c 16-)
+prefixed_rules_category = $(shell echo "$(PWD)" | sed "s/.*\///")
+rules_category = $(shell echo $(prefixed_rules_category) | sed 's/.*Rules\.//')
 
 rules_dll = ../../bin/$(prefixed_rules_category).dll
 tests_dll = Test.Rules.$(rules_category).dll
