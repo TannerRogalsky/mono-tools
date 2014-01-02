@@ -25,16 +25,21 @@ namespace Tests.Unity.Rules.Performance
     {
         void Update()
         {
-            LQDB.SelectAll();
+            SelectAll();
+            this.Update();
         }
 
         void FixedUpdate()
         {
-            LQDB.SelectAll();
+            SelectAll();
         }
 
         void LateUpdate()
         {
+            SelectAll();
+        }
+
+        void SelectAll() {
             LQDB.SelectAll();
         }
     }
