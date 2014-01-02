@@ -8,6 +8,7 @@ EXTRA_TESTS_OPTIONS := $(TESTS_OPTIONS)
 console_runner=../../bin/gendarme.exe
 framework=../../bin/Gendarme.Framework.dll
 common_tests=../Test.Rules/Test.Rules.dll
+unity_engine=/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll
 
 prefixed_rules_category = $(shell echo "$(PWD)" | sed "s/.*\///")
 rules_category = $(shell echo $(prefixed_rules_category) | sed 's/.*Rules\.//')
@@ -45,7 +46,7 @@ $(rules_dll): $(rules_build_sources) $(framework)
 tests_build_sources = $(addprefix $(srcdir)/Test/, $(tests_sources))
 
 $(tests_dll): $(tests_build_sources) $(rules_dll) $(EXTRA_TESTS_DEPS)
-	$(MCS) -target:library $(EXTRA_TESTS_OPTIONS) -r:$(CECIL_ASM) -r:$(framework) \
+	$(MCS) -target:library $(EXTRA_TESTS_OPTIONS) -r:$(CECIL_ASM) -r:$(framework) -r:$(unity_engine) \
 		-r:$(rules_dll) -r:$(common_tests) -pkg:mono-nunit -out:$@ $(tests_build_sources)
 
 rule: $(rules_dll)
@@ -54,7 +55,7 @@ test: $(tests_dll)
 
 run-test: test
 	cp ../../bin/gendarme.exe.config $(tests_dll).config
-	MONO_PATH=../../bin/:../Test.Rules/:$(MONO_PATH) mono ../../NUnit-2.6.3/bin/nunit-console.exe $(tests_dll)
+	MONO_PATH=../../bin/:../Test.Rules/:/Applications/Unity/Unity.app/Contents/Frameworks/Managed/:$(MONO_PATH) mono ../../NUnit-2.6.3/bin/nunit-console.exe $(tests_dll)
 
 self-test: $(rules_dll)
 	mono --debug $(console_runner) $(rules_dll)
