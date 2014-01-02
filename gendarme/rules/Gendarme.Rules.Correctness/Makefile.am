@@ -6,18 +6,17 @@ rules_sources =  \
 	AvoidConstructorsInStaticTypesRule.cs \
 	AvoidFloatingPointEqualityRule.cs \
 	AvoidMethodsWithSideEffectsInConditionalCodeRule.cs \
-	DeclareEventsExplicitlyRule.cs \
-	DoNotRecurseInEqualityRule.cs \
 	BadRecursiveInvocationRule.cs \
 	CallingEqualsWithNullArgRule.cs \
 	CheckParametersNullityInVisibleMethodsRule.cs \
+	DeclareEventsExplicitlyRule.cs \
 	DisposableFieldsShouldBeDisposedRule.cs \
+	DoNotRecurseInEqualityRule.cs \
 	DoNotRoundIntegersRule.cs \
 	DontCompareWithNaNRule.cs \
 	EnsureLocalDisposalRule.cs \
 	FinalizersShouldCallBaseClassFinalizerRule.cs \
 	FloatComparisonRule.cs \
-	ReviewInconsistentIdentityRule.cs \
 	MethodCanBeMadeStaticRule.cs \
 	ProvideCorrectArgumentsToFormattingMethodsRule.cs \
 	ProvideCorrectRegexPatternRule.cs \
@@ -26,6 +25,7 @@ rules_sources =  \
 	ReviewCastOnIntegerDivisionRule.cs \
 	ReviewCastOnIntegerMultiplicationRule.cs \
 	ReviewDoubleAssignmentRule.cs \
+	ReviewInconsistentIdentityRule.cs \
 	ReviewSelfAssignmentRule.cs \
 	ReviewUselessControlFlowRule.cs \
 	ReviewUseOfInt64BitsToDoubleRule.cs \

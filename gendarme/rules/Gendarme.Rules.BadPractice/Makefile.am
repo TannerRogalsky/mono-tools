@@ -20,8 +20,8 @@ rules_sources =  \
 	OnlyUseDisposeForIDisposableTypesRule.cs \
 	PreferEmptyInstanceOverNullRule.cs \
 	PreferParamsArrayForVariableArgumentsRule.cs \
-	PreferTryParseRule.cs \
 	PreferSafeHandleRule.cs \
+	PreferTryParseRule.cs \
 	ReplaceIncompleteOddnessCheckRule.cs \
 	ReturnNullRule.cs \
 	ToStringReturnsNullRule.cs \

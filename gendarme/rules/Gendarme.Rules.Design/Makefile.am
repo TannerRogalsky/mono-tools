@@ -47,8 +47,8 @@ rules_sources =  \
 	StronglyTypedRule.cs \
 	StronglyTypeICollectionMembersRule.cs \
 	TypesShouldBeInsideNamespacesRule.cs \
-	UseFlagsAttributeRule.cs \
 	UseCorrectDisposeSignaturesRule.cs \
+	UseFlagsAttributeRule.cs \
 	UsingCloneWithoutImplementingICloneableRule.cs
 
 EXTRA_TESTS_OPTIONS += -d:CODE_ANALYSIS
